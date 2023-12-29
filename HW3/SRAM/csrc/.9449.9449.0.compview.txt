@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1685170073.527626617, "rt":0.75, "ut":0.12, "st":0.08}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1685170072.831922085}
+{"VCS_COMP_START_TIME": 1685170072.831922085}
+{"VCS_COMP_END_TIME": 1685170075.751466807}
+{"VCS_USER_OPTIONS": "testbench.v SRAM.v -full64 -R -debug_access+all +v2k +neg_tchk"}

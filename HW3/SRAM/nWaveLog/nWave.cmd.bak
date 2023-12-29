@@ -1,0 +1,128 @@
+verdiSetActWin -win $_nWave1
+wvRestoreSignal -win $_nWave1 \
+           "/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/sram.rc" \
+           -overWriteAutoAlias on -appendSignals on
+wvResizeWindow -win $_nWave1 0 23 1707 889
+wvResizeWindow -win $_nWave1 1920 31 892 72
+wvResizeWindow -win $_nWave1 1920 23 1920 1017
+wvResizeWindow -win $_nWave1 680 63 892 72
+wvResizeWindow -win $_nWave1 0 23 1920 1017
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvSetRadix -win $_nWave1 -format UDec
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectSignal -win $_nWave1 {( "G1" 1 )} 
+wvSelectGroup -win $_nWave1 {G2}
+wvExit
+nWave1
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvSetPosition -win $_nWave1 {("G1" 1)}
+wvSelectGroup -win $_nWave1 {G1}
+wvRenameGroup -win $_nWave1 {G1} {SRAM}
+wvSelectGroup -win $_nWave1 {G2}
+wvSetPosition -win $_nWave1 {("G2" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/SRAM_tb"
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"SRAM" \
+{/SRAM_tb/SRAM/clk} \
+{/SRAM_tb/SRAM/rst_n} \
+{/SRAM_tb/SRAM/cs_n} \
+{/SRAM_tb/SRAM/we_n} \
+{/SRAM_tb/SRAM/addr\[3:0\]} \
+{/SRAM_tb/SRAM/data0} \
+{/SRAM_tb/SRAM/data1} \
+{/SRAM_tb/SRAM/data_in\[1:0\]} \
+{/SRAM_tb/SRAM/data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/SRAM_tb/pattern_num\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 1 )} 
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 142508.625571 -snap {("G2" 1)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/SRAM_tb"
+wvGetSignalSetScope -win $_nWave1 "/SRAM_tb"
+wvSetPosition -win $_nWave1 {("G2" 2)}
+wvSetPosition -win $_nWave1 {("G2" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"SRAM" \
+{/SRAM_tb/SRAM/clk} \
+{/SRAM_tb/SRAM/rst_n} \
+{/SRAM_tb/SRAM/cs_n} \
+{/SRAM_tb/SRAM/we_n} \
+{/SRAM_tb/SRAM/addr\[3:0\]} \
+{/SRAM_tb/SRAM/data0} \
+{/SRAM_tb/SRAM/data1} \
+{/SRAM_tb/SRAM/data_in\[1:0\]} \
+{/SRAM_tb/SRAM/data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/SRAM_tb/pattern_num\[31:0\]} \
+{/SRAM_tb/input_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 2 )} 
+wvSetPosition -win $_nWave1 {("G2" 2)}
+wvGetSignalClose -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/SRAM_tb"
+wvGetSignalSetScope -win $_nWave1 "/SRAM_tb"
+wvSetPosition -win $_nWave1 {("G2" 3)}
+wvSetPosition -win $_nWave1 {("G2" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"SRAM" \
+{/SRAM_tb/SRAM/clk} \
+{/SRAM_tb/SRAM/rst_n} \
+{/SRAM_tb/SRAM/cs_n} \
+{/SRAM_tb/SRAM/we_n} \
+{/SRAM_tb/SRAM/addr\[3:0\]} \
+{/SRAM_tb/SRAM/data0} \
+{/SRAM_tb/SRAM/data1} \
+{/SRAM_tb/SRAM/data_in\[1:0\]} \
+{/SRAM_tb/SRAM/data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/SRAM_tb/pattern_num\[31:0\]} \
+{/SRAM_tb/input_data\[31:0\]} \
+{/SRAM_tb/pattern_data\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 3 )} 
+wvSetPosition -win $_nWave1 {("G2" 3)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G2" 2 3 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvSelectSignal -win $_nWave1 {( "G2" 1 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G3" 0)}
+wvSetPosition -win $_nWave1 {("G2" 0)}
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G2" 0)}
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("SRAM" 9)}
+wvSetPosition -win $_nWave1 {("SRAM" 9)}
+wvSetCursor -win $_nWave1 284800.672685 -snap {("SRAM" 1)}
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1
+wvSearchNext -win $_nWave1

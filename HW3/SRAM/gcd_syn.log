@@ -1,0 +1,280 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version R-2020.09-SP5 for linux64 - Apr 23, 2021 
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home/m111/m111063548/.synopsys_dc_gui/preferences.tcl
+set ref_cycle  2
+2
+#/*--------------------------------------------------------------*/
+#/*----------------------- 1.Read files -------------------------*/
+#/*--------------------------------------------------------------*/
+read_file -format verilog ./SRAM.v
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db'
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/fast.db'
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/typical.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/gtech.db'
+Loading db file '/usr/cad/synopsys/synthesis/cur/libraries/syn/standard.sldb'
+  Loading link library 'slow'
+  Loading link library 'fast'
+  Loading link library 'typical'
+  Loading link library 'gtech'
+Loading verilog file '/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/SRAM.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/SRAM.v
+
+Statistics for case statements in always block at line 29 in file
+	'/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/SRAM.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            38            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine SRAM line 29 in file
+		'/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/SRAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       mem_reg       | Flip-flop |  32   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine SRAM line 108 in file
+		'/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/SRAM.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    data_out_reg     | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|     SRAM/110     |   4    |    8    |      2       |
+|     SRAM/110     |   8    |    1    |      3       |
+======================================================
+Presto compilation completed successfully.
+Current design is now '/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/SRAM.db:SRAM'
+Loaded 1 design.
+Current design is 'SRAM'.
+SRAM
+# Top module name
+current_design [get_designs SRAM]
+Current design is 'SRAM'.
+{SRAM}
+set_operating_conditions slow
+Using operating conditions 'slow' found in library 'slow'.
+1
+#/*--------------------------------------------------------------*/
+#/*--------------- 2. Set design constraints --------------------*/ 
+#/*--------------------------------------------------------------*/
+create_clock -period $ref_cycle [get_ports clk]
+1
+set_dont_touch_network [get_clocks clk]
+1
+set_dont_touch_network [get_ports rst_n]
+1
+set_drive 1 [all_inputs] 
+1
+set_load [load_of slow/CLKBUFX20/A] [all_outputs]
+1
+#/*--------------------------------------------------------------*/
+#/*----------------- 3.Check and Link Design --------------------*/ 
+#/*--------------------------------------------------------------*/
+link 
+
+  Linking design 'SRAM'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  SRAM                        /home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/SRAM.db
+  slow (library)              /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db
+  fast (library)              /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/fast.db
+  typical (library)           /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/typical.db
+  dw_foundation.sldb (library) /usr/cad/synopsys/synthesis/cur/libraries/syn/dw_foundation.sldb
+
+1
+check_design
+1
+uniquify
+1
+set_fix_multiple_port_nets -all -buffer_constants  
+1
+#/*--------------------------------------------------------------*/
+#/*------------------------ 4.Compile ---------------------------*/ 
+#/*--------------------------------------------------------------*/
+set compile_new_boolean_structure 
+set_structure false 
+1
+compile  -map_effort medium 
+Information: Checking out the license 'DesignWare'. (SEC-104)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | R-2020.09-DWBB_202009.5 |     *     |
+| Licensed DW Building Blocks        | R-2020.09-DWBB_202009.5 |     *     |
+============================================================================
+
+
+Warning: Operating condition slow set on design SRAM has different process,
+voltage and temperatures parameters than the parameters at which target library 
+fast is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'SRAM'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/fast.db'
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/typical.db'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07    1726.6      0.00       0.0       0.0                          
+    0:00:07    1726.6      0.00       0.0       0.0                          
+    0:00:07    1726.6      0.00       0.0       0.0                          
+    0:00:07    1726.6      0.00       0.0       0.0                          
+    0:00:07    1726.6      0.00       0.0       0.0                          
+    0:00:07     943.4      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     942.7      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+    0:00:07     940.6      0.00       0.0       0.0                          
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+check_design 
+1
+set bus_inference_style {%s[%d]}
+%s[%d]
+set bus_naming_style {%s[%d]}
+%s[%d]
+set hdlout_internal_busses true
+true
+change_names -hierarchy -rule verilog
+1
+define_name_rules name_rule -allowed {a-z A-Z 0-9 _} -max_length 255 -type cell
+1
+define_name_rules name_rule -allowed {a-z A-Z 0-9 _[]} -max_length 255 -type net
+1
+define_name_rules name_rule -map {{"\*cell\*" "cell"}}
+1
+define_name_rules name_rule -map {{"*-return", "myreturn"}}
+1
+define_name_rules name_rule -case_insensitive
+1
+change_names -hierarchy -rules name_rule
+1
+set verilogout_show_unconnected_pins true  
+true
+#/*--------------------------------------------------------------*/ 
+#/*----------------------- 5.Write out files --------------------*/ 
+#/*--------------------------------------------------------------*/
+report_area > ./sram_syn.report
+report_timing -path full -delay max >> ./sram_syn.report
+report_power >> ./sram_syn.report
+write -format verilog -hierarchy -output ./sram_syn.v
+Writing verilog file '/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/sram_syn.v'.
+1
+write -format verilog -hierarchy -output ./sram_syn.v
+Writing verilog file '/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/sram_syn.v'.
+1
+write_sdf -version 1.0 -context verilog -load_delay cell ./sram_syn.sdf 
+Information: Writing timing information to file '/home/m111/m111063548/VLSI_TEST/LAB3/SRAM/test/sram_syn.sdf'. (WT-3)
+1
+write_sdc ./sram_syn.sdc 
+1
+exit
+
+Memory usage for this session 232 Mbytes.
+Memory usage for this session including child processes 232 Mbytes.
+CPU usage for this session 16 seconds ( 0.00 hours ).
+Elapsed time for this session 24 seconds ( 0.01 hours ).
+
+Thank you...

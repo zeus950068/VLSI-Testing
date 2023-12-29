@@ -1,0 +1,20 @@
+{
+    "SRAM_tb": [
+        "SRAM_tb",
+        "b6hTy",
+        "module",
+        1
+    ],
+    "SRAM": [
+        "SRAM",
+        "eFPF8",
+        "module",
+        14
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        3
+    ]
+}

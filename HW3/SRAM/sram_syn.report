@@ -1,0 +1,131 @@
+ 
+****************************************
+Report : area
+Design : SRAM
+Version: R-2020.09-SP5
+Date   : Fri Jun  2 22:56:33 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+Number of ports:                           12
+Number of nets:                           144
+Number of cells:                          134
+Number of combinational cells:            100
+Number of sequential cells:                34
+Number of macros/black boxes:               0
+Number of buf/inv:                          7
+Number of references:                      17
+
+Combinational area:                417.009613
+Buf/Inv area:                       15.523201
+Noncombinational area:             523.555201
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   940.564814
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : SRAM
+Version: R-2020.09-SP5
+Date   : Fri Jun  2 22:56:33 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: mem_reg_3__1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: data_out_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  mem_reg_3__1_/CK (DFFRQX2)               0.00       0.00 r
+  mem_reg_3__1_/Q (DFFRQX2)                0.26       0.26 f
+  U153/Y (AOI22XL)                         0.12       0.37 r
+  U155/Y (CLKNAND2X2)                      0.05       0.43 f
+  U95/Y (AOI22XL)                          0.10       0.53 r
+  U93/Y (OAI2B2X1)                         0.09       0.63 f
+  data_out_reg_0_/D (DFFQXL)               0.00       0.63 f
+  data arrival time                                   0.63
+
+  clock clk (rise edge)                    2.00       2.00
+  clock network delay (ideal)              0.00       2.00
+  data_out_reg_0_/CK (DFFQXL)              0.00       2.00 r
+  library setup time                      -0.09       1.91
+  data required time                                  1.91
+  -----------------------------------------------------------
+  data required time                                  1.91
+  data arrival time                                  -0.63
+  -----------------------------------------------------------
+  slack (MET)                                         1.28
+
+
+1
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : SRAM
+Version: R-2020.09-SP5
+Date   : Fri Jun  2 22:56:34 2023
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 168.9093 uW   (97%)
+  Net Switching Power  =   4.6726 uW    (3%)
+                         ---------
+Total Dynamic Power    = 173.5819 uW  (100%)
+
+Cell Leakage Power     =   2.5083 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.1665        1.6764e-04        1.1054e+06            0.1678  (  95.28%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.4033e-03        4.5050e-03        1.4029e+06        8.3112e-03  (   4.72%)
+--------------------------------------------------------------------------------------------------
+Total              0.1689 mW     4.6726e-03 mW     2.5083e+06 pW         0.1761 mW
+1
