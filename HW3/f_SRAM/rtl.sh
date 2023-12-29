@@ -1,0 +1,1 @@
+vcs BIST_March_tb.v BIST_March.v -full64 -R -debug_access+all +v2k +neg_tchk
