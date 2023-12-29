@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1682945975.591639397, "rt":0.70, "ut":0.11, "st":0.08}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1682945974.926927467}
+{"VCS_COMP_START_TIME": 1682945974.926927467}
+{"VCS_COMP_END_TIME": 1682945978.488294013}
+{"VCS_USER_OPTIONS": "..//1.RTL_simulation/TESTBED.v divider_syn.v -v /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/verilog/tsmc090.v -full64 -R -debug_access+all +v2k +neg_tchk"}

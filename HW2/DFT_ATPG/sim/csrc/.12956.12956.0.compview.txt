@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1682937394.812142082, "rt":1.78, "ut":0.53, "st":0.20}}
+{"vcselab":{"timestamp_begin":1682937396.676681372, "rt":1.32, "ut":0.46, "st":0.15}}
+{"link":{"timestamp_begin":1682937398.078507786, "rt":0.42, "ut":0.21, "st":0.13}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1682937394.205165622}
+{"VCS_COMP_START_TIME": 1682937394.205165622}
+{"VCS_COMP_END_TIME": 1682937399.999579431}
+{"VCS_USER_OPTIONS": "-f gate_sim.f -full64 -debug_acc+pp+fsdb -notice +neg_tchk -R"}
+{"vcs1": {"peak_mem": 329760}}
+{"stitch_vcselab": {"peak_mem": 220156}}

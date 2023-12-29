@@ -1,0 +1,138 @@
+ 
+****************************************
+Report : area
+Design : divider
+Version: R-2020.09-SP5
+Date   : Tue May  9 16:35:44 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+Number of ports:                           78
+Number of nets:                           291
+Number of cells:                          233
+Number of combinational cells:            195
+Number of sequential cells:                35
+Number of macros/black boxes:               0
+Number of buf/inv:                         46
+Number of references:                      47
+
+Combinational area:                804.384016
+Buf/Inv area:                       97.372803
+Noncombinational area:             580.708810
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1385.092825
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : divider
+Version: R-2020.09-SP5
+Date   : Tue May  9 16:35:44 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: input_B_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: input_A_reg_5_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input_B_reg_0_/CK (DFFRQX2)              0.00       0.00 r
+  input_B_reg_0_/Q (DFFRQX2)               0.27       0.27 f
+  sub_28/B[0] (divider_DW01_sub_1)         0.00       0.27 f
+  sub_28/U61/Y (CLKINVX2)                  0.05       0.31 r
+  sub_28/U68/Y (NOR2X4)                    0.03       0.34 f
+  sub_28/U70/Y (OAI2B1X4)                  0.07       0.41 r
+  sub_28/U75/Y (AOI21X4)                   0.05       0.46 f
+  sub_28/U73/Y (OR2XL)                     0.14       0.60 f
+  sub_28/U74/Y (CLKNAND2X2)                0.04       0.64 r
+  sub_28/U64/Y (XNOR2X1)                   0.06       0.70 r
+  sub_28/DIFF[5] (divider_DW01_sub_1)      0.00       0.70 r
+  U75/Y (AO2B2X4)                          0.11       0.81 r
+  U69/Y (AO21X4)                           0.05       0.86 r
+  input_A_reg_5_/D (DFFRQX1)               0.00       0.86 r
+  data arrival time                                   0.86
+
+  clock clk (rise edge)                    1.00       1.00
+  clock network delay (ideal)              0.00       1.00
+  input_A_reg_5_/CK (DFFRQX1)              0.00       1.00 r
+  library setup time                      -0.14       0.86
+  data required time                                  0.86
+  -----------------------------------------------------------
+  data required time                                  0.86
+  data arrival time                                  -0.86
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+1
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : divider
+Version: R-2020.09-SP5
+Date   : Tue May  9 16:35:45 2023
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 461.0793 uW   (95%)
+  Net Switching Power  =  21.9273 uW    (5%)
+                         ---------
+Total Dynamic Power    = 483.0066 uW  (100%)
+
+Cell Leakage Power     =   4.8764 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.4361        8.1352e-03        1.4582e+06            0.4457  (  91.35%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.5002e-02        1.3792e-02        3.4182e+06        4.2213e-02  (   8.65%)
+--------------------------------------------------------------------------------------------------
+Total              0.4611 mW     2.1927e-02 mW     4.8764e+06 pW         0.4879 mW
+1
