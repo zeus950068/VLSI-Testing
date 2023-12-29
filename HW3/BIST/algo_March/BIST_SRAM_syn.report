@@ -1,0 +1,142 @@
+ 
+****************************************
+Report : area
+Design : BIST_March
+Version: R-2020.09-SP5
+Date   : Thu Jun  1 16:57:35 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+Number of ports:                          101
+Number of nets:                           374
+Number of cells:                          282
+Number of combinational cells:            214
+Number of sequential cells:                55
+Number of macros/black boxes:               0
+Number of buf/inv:                         29
+Number of references:                      11
+
+Combinational area:                901.756821
+Buf/Inv area:                       61.387202
+Noncombinational area:             742.996787
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1644.753608
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BIST_March
+Version: R-2020.09-SP5
+Date   : Thu Jun  1 16:57:35 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: Pattern_Generator/counter_reg_3_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Pattern_Generator/march_data_out_reg_1_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Pattern_Generator/counter_reg_3_/CK (DFFQXL)            0.00       0.00 r
+  Pattern_Generator/counter_reg_3_/Q (DFFQXL)             0.23       0.23 r
+  Pattern_Generator/U53/Y (INVX2)                         0.05       0.28 f
+  Pattern_Generator/U19/Y (NOR4X2)                        0.26       0.54 r
+  Pattern_Generator/U9/Y (INVX2)                          0.07       0.61 f
+  Pattern_Generator/U50/Y (NOR4X2)                        0.15       0.76 r
+  Pattern_Generator/U18/Y (NOR3X1)                        0.07       0.83 f
+  Pattern_Generator/U17/Y (NOR3BX1)                       0.09       0.92 r
+  Pattern_Generator/U5/Y (OAI211XL)                       0.25       1.16 f
+  Pattern_Generator/U11/Y (INVX2)                         0.08       1.25 r
+  Pattern_Generator/U21/Y (NOR2X2)                        0.05       1.30 f
+  Pattern_Generator/U12/Y (NAND2X2)                       0.04       1.34 r
+  Pattern_Generator/U20/Y (NOR3BX1)                       0.14       1.47 r
+  Pattern_Generator/U10/Y (NAND2X2)                       0.07       1.55 f
+  Pattern_Generator/U23/Y (OAI32XL)                       0.16       1.71 r
+  Pattern_Generator/U22/Y (INVX2)                         0.06       1.77 f
+  Pattern_Generator/U54/Y (OAI211XL)                      0.05       1.82 r
+  Pattern_Generator/march_data_out_reg_1_/D (DFFQXL)      0.00       1.82 r
+  data arrival time                                                  1.82
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  Pattern_Generator/march_data_out_reg_1_/CK (DFFQXL)     0.00      10.00 r
+  library setup time                                     -0.08       9.92
+  data required time                                                 9.92
+  --------------------------------------------------------------------------
+  data required time                                                 9.92
+  data arrival time                                                 -1.82
+  --------------------------------------------------------------------------
+  slack (MET)                                                        8.10
+
+
+1
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : BIST_March
+Version: R-2020.09-SP5
+Date   : Thu Jun  1 16:57:36 2023
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  63.3876 uW   (95%)
+  Net Switching Power  =   3.1755 uW    (5%)
+                         ---------
+Total Dynamic Power    =  66.5631 uW  (100%)
+
+Cell Leakage Power     =   5.2224 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register       6.0804e-02        4.7387e-04        1.9795e+06        6.3258e-02  (  88.12%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  2.5833e-03        2.7017e-03        3.2429e+06        8.5279e-03  (  11.88%)
+--------------------------------------------------------------------------------------------------
+Total          6.3388e-02 mW     3.1755e-03 mW     5.2224e+06 pW     7.1785e-02 mW
+1

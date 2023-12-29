@@ -1,0 +1,6 @@
+{"vcs1":{"timestamp_begin":1684762723.663777864, "rt":1.15, "ut":0.12, "st":0.07}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1684762723.020951286}
+{"VCS_COMP_START_TIME": 1684762723.020951286}
+{"VCS_COMP_END_TIME": 1684762724.902943055}
+{"VCS_USER_OPTIONS": "BIST_tb.v BIST.v -full64 -R -debug_access+all +v2k +neg_tchk"}
+{"vcs1": {"peak_mem": 313568}}

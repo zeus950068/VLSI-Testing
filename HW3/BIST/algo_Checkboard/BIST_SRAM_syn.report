@@ -1,0 +1,137 @@
+ 
+****************************************
+Report : area
+Design : BIST_Checkboard
+Version: R-2020.09-SP5
+Date   : Thu Jun  1 16:36:06 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+Number of ports:                          101
+Number of nets:                           358
+Number of cells:                          268
+Number of combinational cells:            198
+Number of sequential cells:                57
+Number of macros/black boxes:               0
+Number of buf/inv:                         32
+Number of references:                      11
+
+Combinational area:                864.360021
+Buf/Inv area:                       69.148802
+Noncombinational area:             825.551991
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1689.912012
+Total area:                 undefined
+1
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : BIST_Checkboard
+Version: R-2020.09-SP5
+Date   : Thu Jun  1 16:36:06 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: Pattern_Generator/counter_reg_1_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: Pattern_Generator/checkboard_data_out_reg_0_
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Pattern_Generator/counter_reg_1_/CK (DFFHQX2)           0.00       0.00 r
+  Pattern_Generator/counter_reg_1_/Q (DFFHQX2)            0.14       0.14 f
+  Pattern_Generator/U50/Y (INVX2)                         0.04       0.18 r
+  Pattern_Generator/U27/Y (NAND4X2)                       0.10       0.28 f
+  Pattern_Generator/U44/Y (NOR3XL)                        0.11       0.39 r
+  Pattern_Generator/U22/Y (AOI32X1)                       0.15       0.53 f
+  Pattern_Generator/U21/Y (NAND3X1)                       0.10       0.63 r
+  Pattern_Generator/U34/Y (NAND2X2)                       0.06       0.69 f
+  Pattern_Generator/U48/Y (AND4X2)                        0.12       0.81 f
+  Pattern_Generator/U65/Y (OAI2BB1X1)                     0.11       0.92 f
+  Pattern_Generator/checkboard_data_out_reg_0_/D (DFFQXL)
+                                                          0.00       0.92 f
+  data arrival time                                                  0.92
+
+  clock clk (rise edge)                                   1.00       1.00
+  clock network delay (ideal)                             0.00       1.00
+  Pattern_Generator/checkboard_data_out_reg_0_/CK (DFFQXL)
+                                                          0.00       1.00 r
+  library setup time                                     -0.08       0.92
+  data required time                                                 0.92
+  --------------------------------------------------------------------------
+  data required time                                                 0.92
+  data arrival time                                                 -0.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
+Loading db file '/home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : BIST_Checkboard
+Version: R-2020.09-SP5
+Date   : Thu Jun  1 16:36:07 2023
+****************************************
+
+
+Library(s) Used:
+
+    slow (File: /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/synopsys/slow.db)
+
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  = 757.2296 uW   (95%)
+  Net Switching Power  =  38.3090 uW    (5%)
+                         ---------
+Total Dynamic Power    = 795.5385 uW  (100%)
+
+Cell Leakage Power     =   5.8051 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register           0.7255        5.7871e-03        2.5865e+06            0.7339  (  91.59%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  3.1682e-02        3.2522e-02        3.2185e+06        6.7422e-02  (   8.41%)
+--------------------------------------------------------------------------------------------------
+Total              0.7572 mW     3.8309e-02 mW     5.8051e+06 pW         0.8013 mW
+1

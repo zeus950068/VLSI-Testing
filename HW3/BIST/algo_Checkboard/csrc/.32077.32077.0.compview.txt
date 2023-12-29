@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1684948409.565347678, "rt":1.21, "ut":0.11, "st":0.07}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1684948408.975097734}
+{"VCS_COMP_START_TIME": 1684948408.975097734}
+{"VCS_COMP_END_TIME": 1684948416.094600570}
+{"VCS_USER_OPTIONS": "BIST_Checkboard_tb.v BIST_Checkboard.v -full64 -R -debug_access+all +v2k +neg_tchk"}

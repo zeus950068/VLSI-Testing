@@ -1,0 +1,345 @@
+verdiSetActWin -win $_nWave1
+wvRestoreSignal -win $_nWave1 \
+           "/home/m111/m111063548/VLSI_TEST/LAB3/BIST/test/BIST_March_without_normal _input.rc" \
+           -overWriteAutoAlias on -appendSignals on
+wvResizeWindow -win wvResizeWindow -win $_nWave1 0 23 1707 889
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/BIST_March_tb/BIST_March"
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/BIST_March_tb/BIST_March/Comparator"
+wvGetSignalSetScope -win $_nWave1 "/BIST_March_tb/BIST_March/Delay_we_n"
+wvGetSignalSetScope -win $_nWave1 "/BIST_March_tb/BIST_March/Pattern_Generator"
+wvGetSignalSetScope -win $_nWave1 "/BIST_March_tb/BIST_March/SRAM"
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"March Pattern Generator" \
+{/BIST_March_tb/BIST_March/Pattern_Generator/clk} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/rst} \
+{/BIST_March_tb/BIST_MarchwvSetCursor -win $_nWave1 19774205.202312 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 19561054.913295 -snap {("G7" 0)}
+wvSetCursor -win $_nWave1 19567377.167630 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 19552926.300578 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvExit
+_March/SRAM/we_n} \
+{/BIST_March_tb/BIST_March/SRAM/addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/SRAM/data_in\[1:0\]} \
+{/BIST_March_tb/BIST_March/SRAM/data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Comparator" \
+{/BIST_March_tb/BIST_March/Comparator/data_in1\[1:0\]} \
+{/BIST_March_tb/BIST_March/Comparator/data_in2\[1:0\]} \
+{/BIST_March_tb/BIST_March/Comparator/Equal_or_not} \
+}
+wvAddSignal -win $_nWave1 -group {"BIST" \
+{/BIST_March_tb/BIST_March/pass_or_fail} \
+{/BIST_March_tb/BIST_March/BIST_test_done} \
+}
+wvAddSignal -win $_nWave1 -group {"Normal Inputs" \
+{/BIST_March_tb/BIST_March/MUX_addr/normal_input_addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/MUX_data/normal_input_data\[1:0\]} \
+{/BIST_March_tb/BIST_March/tester} \
+{/BIST_March_tb/test_num\[31:0\]} \
+{/BIST_March_tb/BIST_March/SRAM/data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "Normal Inputs" 5 )} 
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvGetSignalClose -win $_nWave1
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G7" 0)}
+wvSetPosition -win $_nWave1 {("Normal Inputs" 4)}
+wvSetCursor -win $_nWave1 161953.460797 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 366029.346376 -snap {("Normal Inputs" 2)}
+wvSetCursor -win $_nWave1 211338.372610 -snap {("Normal Inputs" 4)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 127734.104046 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 201156.069364 -snap {("G7" 0)}
+wvSetCursor -win $_nWave1 119184.971098 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 156398.843931 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 204173.410405 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 198641.618497 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 208196.531792 -snap {("Normal Inputs" 4)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 217248.554913 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 192606.936416 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomAll -win $_nWave1
+wvZoomAll -win $_nWave1
+wvSetCursor -win $_nWave1 214734.104046 -snap {("SRAM" 6)}
+wvSetCursor -win $_nWave1 125219.653179 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomAll -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 168468.208092 -snap {("SRAM" 7)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomAll -win $_nWave1
+wvZoomAll -win $_nWave1
+wvZoomAll -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/BIST_March_tb"
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"March Pattern Generator" \
+{/BIST_March_tb/BIST_March/Pattern_Generator/clk} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/rst} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/cs_n} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/counter\[6:0\]} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/we_n} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/march_addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/march_data_out\[1:0\]} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/test_done} \
+}
+wvAddSignal -win $_nWave1 -group {"March Pattern Generator/Delay Buffer" \
+{/BIST_March_tb/BIST_March/Delay_addr/delay_addr_out\[3:0\]} \
+{/BIST_March_tb/BIST_March/Delay_data/delay_data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"SRAM" \
+{/BIST_March_tb/BIST_March/SRAM/clk} \
+{/BIST_March_tb/BIST_March/SRAM/rst} \
+{/BIST_March_tb/BIST_March/SRAM/cs_n} \
+{/BIST_March_tb/BIST_March/SRAM/we_n} \
+{/BIST_March_tb/BIST_March/SRAM/addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/SRAM/data_in\[1:0\]} \
+{/BIST_March_tb/BIST_March/SRAM/data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Comparator" \
+{/BIST_March_tb/BIST_March/Comparator/data_in1\[1:0\]} \
+{/BIST_March_tb/BIST_March/Comparator/data_in2\[1:0\]} \
+{/BIST_March_tb/BIST_March/Comparator/Equal_or_not} \
+}
+wvAddSignal -win $_nWave1 -group {"BIST" \
+{/BIST_March_tb/BIST_March/pass_or_fail} \
+{/BIST_March_tb/BIST_March/BIST_test_done} \
+}
+wvAddSignal -win $_nWave1 -group {"Normal Inputs" \
+{/BIST_March_tb/BIST_March/MUX_addr/normal_input_addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/MUX_data/normal_input_data\[1:0\]} \
+{/BIST_March_tb/BIST_March/tester} \
+{/BIST_March_tb/test_num\[31:0\]} \
+{/BIST_March_tb/tester} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "Normal Inputs" 5 )} 
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvGetSignalClose -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomAll -win $_nWave1
+wvZoomAll -win $_nWave1
+wvZoomAll -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "Normal Inputs" 5 )} 
+wvCut -win $_nWave1
+wvSetPosition -win $_nWave1 {("G7" 0)}
+wvSetPosition -win $_nWave1 {("Normal Inputs" 4)}
+wvSetCursor -win $_nWave1 195624.277457 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomAll -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvSetCursor -win $_nWave1 2819905721.992946 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 4493752.601156 -snap {("G7" 0)}
+wvSelectSignal -win $_nWave1 {( "BIST" 2 )} 
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoom -win $_nWave1 3036573.410405 3262201.156069
+wvZoomAll -win $_nWave1
+wvZoom -win $_nWave1 5781710.982659 6004988.439306
+wvZoom -win $_nWave1 5860922.854922 5862536.131343
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "Comparator" 1 )} 
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/BIST_March_tb/BIST_March/Comparator"
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"March Pattern Generator" \
+{/BIST_March_tb/BIST_March/Pattern_Generator/clk} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/rst} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/cs_n} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/counter\[6:0\]} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/we_n} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/march_addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/march_data_out\[1:0\]} \
+{/BIST_March_tb/BIST_March/Pattern_Generator/test_done} \
+}
+wvAddSignal -win $_nWave1 -group {"March Pattern Generator/Delay Buffer" \
+{/BIST_March_tb/BIST_March/Delay_addr/delay_addr_out\[3:0\]} \
+{/BIST_March_tb/BIST_March/Delay_data/delay_data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"SRAM" \
+{/BIST_March_tb/BIST_March/SRAM/clk} \
+{/BIST_March_tb/BIST_March/SRAM/rst} \
+{/BIST_March_tb/BIST_March/SRAM/cs_n} \
+{/BIST_March_tb/BIST_March/SRAM/we_n} \
+{/BIST_March_tb/BIST_March/SRAM/addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/SRAM/data_in\[1:0\]} \
+{/BIST_March_tb/BIST_March/SRAM/data_out\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"Comparator" \
+{/BIST_March_tb/BIST_March/Comparator/data_in1\[1:0\]} \
+{/BIST_March_tb/BIST_March/Comparator/data_in2\[1:0\]} \
+{/BIST_March_tb/BIST_March/Comparator/Equal_or_not} \
+}
+wvAddSignal -win $_nWave1 -group {"BIST" \
+{/BIST_March_tb/BIST_March/pass_or_fail} \
+{/BIST_March_tb/BIST_March/BIST_test_done} \
+}
+wvAddSignal -win $_nWave1 -group {"Normal Inputs" \
+{/BIST_March_tb/BIST_March/MUX_addr/normal_input_addr\[3:0\]} \
+{/BIST_March_tb/BIST_March/MUX_data/normal_input_data\[1:0\]} \
+{/BIST_March_tb/BIST_March/tester} \
+{/BIST_March_tb/test_num\[31:0\]} \
+{/BIST_March_tb/BIST_March/Comparator/we_n} \
+}
+wvAddSignal -win $_nWave1 -group {"G7" \
+}
+wvSelectSignal -win $_nWave1 {( "Normal Inputs" 5 )} 
+wvSetPosition -win $_nWave1 {("Normal Inputs" 5)}
+wvGetSignalClose -win $_nWave1
+wvSetPosition -win $_nWave1 {("Normal Inputs" 2)}
+wvSetPosition -win $_nWave1 {("BIST" 1)}
+wvSetPosition -win $_nWave1 {("BIST" 0)}
+wvSetPosition -win $_nWave1 {("Comparator" 3)}
+wvSetPosition -win $_nWave1 {("Comparator" 2)}
+wvSetPosition -win $_nWave1 {("Comparator" 1)}
+wvSetPosition -win $_nWave1 {("Comparator" 0)}
+wvSetPosition -win $_nWave1 {("Comparator" 1)}
+wvSetPosition -win $_nWave1 {("Comparator" 2)}
+wvSetPosition -win $_nWave1 {("Comparator" 3)}
+wvSetPosition -win $_nWave1 {("Comparator" 2)}
+wvSetPosition -win $_nWave1 {("Comparator" 3)}
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("Comparator" 3)}
+wvSetPosition -win $_nWave1 {("Comparator" 4)}
+wvSaveSignal -win $_nWave1 \
+           "/home/m111/m111063548/VLSI_TEST/LAB3/BIST/test/BIST_March.rc"
+wvSelectGroup -win $_nWave1 {G7}
+wvSetPosition -win $_nWave1 {("G7" 0)}
+wvSetCursor -win $_nWave1 5862177.107399 -snap {("Comparator" 2)}
+wvSetCursor -win $_nWave1 5862270.360371 -snap {("Comparator" 3)}
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 5845316.970006 -snap {("G7" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 20664261.843746 -snap {("BIST" 1)}
+wvZoom -win $_nWave1 18639851.718573 19747547.824800
+wvZoomOut -win $_nWave1
+wvZoom -win $_nWave1 18937585.065035 18956793.668033
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoom -win $_nWave1 18861916.493102 18954295.439312
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1

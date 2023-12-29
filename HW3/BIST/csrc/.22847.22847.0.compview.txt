@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1684756568.339450521, "rt":1.26, "ut":0.25, "st":0.20}}
+{"vcselab":{"timestamp_begin":1684756569.690181260, "rt":1.28, "ut":0.46, "st":0.18}}
+{"link":{"timestamp_begin":1684756571.045843387, "rt":0.46, "ut":0.24, "st":0.15}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1684756567.671048453}
+{"VCS_COMP_START_TIME": 1684756567.671048453}
+{"VCS_COMP_END_TIME": 1684756573.380279475}
+{"VCS_USER_OPTIONS": "March_tb.v March.v -full64 -R -debug_access+all +v2k +neg_tchk"}
+{"vcs1": {"peak_mem": 328932}}
+{"stitch_vcselab": {"peak_mem": 211884}}

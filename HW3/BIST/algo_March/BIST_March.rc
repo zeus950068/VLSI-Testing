@@ -1,0 +1,127 @@
+Magic 271485
+Revision Verdi_T-2022.06
+
+; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
+viewPort 0 23 1536 889 232 65
+
+; File list:
+; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
+openDirFile -d / "" "/home/m111/m111063548/VLSI_TEST/LAB3/BIST/test/algo_March/BIST_March.fsdb"
+
+; file time scale:
+; fileTimeScale ### s|ms|us|ns|ps
+
+; signal spacing:
+signalSpacing 5
+
+; windowTimeUnit is used for zoom, cursor & marker
+; waveform viewport range
+zoom 989817.212365 1172515.492784
+cursor 2375100.000000
+marker 0.000000
+
+; user define markers
+; userMarker time_pos marker_name color linestyle
+; visible top row signal index
+top 0
+; marker line index
+markerPos 1
+
+; event list
+; addEvent event_name event_expression
+; curEvent event_name
+
+
+
+COMPLEX_EVENT_BEGIN
+
+
+COMPLEX_EVENT_END
+
+
+
+; toolbar current search type
+; curSTATUS search_type
+curSTATUS ByChange
+
+
+addGroup "BIST"
+activeDirFile "" "/home/m111/m111063548/VLSI_TEST/LAB3/BIST/test/algo_March/BIST_March.fsdb"
+addSignal -h 15 /BIST_March_tb/tester
+addGroup "March Pattern Generator"
+addSignal -h 15 /BIST_March_tb/BIST_March/Pattern_Generator/clk
+addSignal -h 15 -holdScope rst
+addSignal -h 15 -holdScope cs_n
+addSignal -h 15 -holdScope we_n
+addSignal -h 15 -UNSIGNED -UDEC -holdScope march_addr[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope march_data_out[1:0]
+addGroup "Normal Inputs"
+addSignal -h 15 /BIST_March_tb/BIST_March/tester
+addSignal -h 15 -UNSIGNED -UDEC /BIST_March_tb/BIST_March/MUX_addr/normal_input_addr[3:0]
+addSignal -h 15 -UNSIGNED -HEX /BIST_March_tb/BIST_March/MUX_data/normal_input_data[1:0]
+addSignal -h 15 -UNSIGNED -UDEC /BIST_March_tb/test_num[31:0]
+addGroup "SRAM"
+addSignal -h 15 /BIST_March_tb/BIST_March/SRAM/clk
+addSignal -h 15 -holdScope rst
+addSignal -h 15 -holdScope cs_n
+addSignal -h 15 -holdScope we_n
+addSignal -h 15 -UNSIGNED -UDEC -holdScope addr[3:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope data_in[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope data_out[1:0]
+addGroup "MUX_ADDR" -e FALSE
+addSignal -h 15 /BIST_March_tb/BIST_March/MUX_addr/sel
+addSignal -h 15 -UNSIGNED -UDEC -holdScope normal_input_addr[3:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope test_patterns[3:0]
+addSignal -h 15 -UNSIGNED -UDEC -holdScope out_addr[3:0]
+addGroup "MUX_DATA" -e FALSE
+addSignal -h 15 /BIST_March_tb/BIST_March/MUX_data/sel
+addSignal -h 15 -UNSIGNED -HEX -holdScope normal_input_data[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope test_patterns[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope out_data[1:0]
+addGroup "Delay Buffer" -e FALSE
+addSignal -h 15 -UNSIGNED -UDEC /BIST_March_tb/BIST_March/Delay_addr/delay_addr_out[3:0]
+addSignal -h 15 -UNSIGNED -HEX /BIST_March_tb/BIST_March/Delay_data/delay_data_out[1:0]
+addGroup "Comparator" -e FALSE
+addSignal -h 15 -UNSIGNED -HEX /BIST_March_tb/BIST_March/Comparator/data_in1[1:0]
+addSignal -h 15 -UNSIGNED -HEX -holdScope data_in2[1:0]
+addSignal -h 15 -holdScope Equal_or_not
+addSignal -h 15 -holdScope we_n
+addGroup "G9"
+
+; getSignalForm Scope Hierarchy Status
+; active file of getSignalForm
+activeDirFile "" "/home/m111/m111063548/VLSI_TEST/LAB3/BIST/test/algo_March/BIST_March.fsdb"
+
+GETSIGNALFORM_SCOPE_HIERARCHY_BEGIN
+getSignalForm close
+
+"/BIST_March_tb"
+"/BIST_March_tb/BIST_March"
+"/BIST_March_tb/BIST_March/MUX_addr"
+"/BIST_March_tb/BIST_March/Pattern_Generator"
+
+SCOPE_LIST_BEGIN
+"/BIST_March_tb"
+"/BIST_tb"
+"/BIST_tb/BIST"
+"/BIST_tb/BIST/SRAM"
+"/BIST_tb/BIST/Pattern_Generator"
+"/BIST_tb/BIST/MUX_addr"
+"/BIST_tb/BIST/MUX_data"
+"/BIST_tb/BIST/Comparator"
+"/BIST_tb/BIST/Delay_addr"
+"/BIST_tb/BIST/Delay_data"
+"/BIST_March_tb/BIST_March"
+"/BIST_March_tb/BIST_March/Pattern_Generator"
+"/BIST_March_tb/BIST_March/Delay_data"
+"/BIST_March_tb/BIST_March/Comparator"
+"/BIST_March_tb/BIST_March/Delay_addr"
+"/BIST_March_tb/BIST_March/SRAM"
+"/BIST_March_tb/BIST_March/MUX_addr"
+"/BIST_March_tb/BIST_March/MUX_data"
+"/BIST_March_tb/BIST_March/Delay_we_n"
+SCOPE_LIST_END
+
+GETSIGNALFORM_SCOPE_HIERARCHY_END
+
+

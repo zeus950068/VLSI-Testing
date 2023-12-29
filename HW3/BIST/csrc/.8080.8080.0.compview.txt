@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1684862115.917338577, "rt":2.59, "ut":0.47, "st":0.23}}
+{"vcselab":{"timestamp_begin":1684862118.598802725, "rt":1.99, "ut":0.52, "st":0.17}}
+{"link":{"timestamp_begin":1684862120.659264432, "rt":0.49, "ut":0.21, "st":0.15}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1684862115.282964545}
+{"VCS_COMP_START_TIME": 1684862115.282964545}
+{"VCS_COMP_END_TIME": 1684862122.764056815}
+{"VCS_USER_OPTIONS": "March_tb.v test_syn.v -v /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/verilog/tsmc090.v -full64 -R -debug_access+all +v2k +neg_tchk"}
+{"vcs1": {"peak_mem": 330704}}
+{"stitch_vcselab": {"peak_mem": 220932}}

@@ -1,0 +1,4 @@
+Command Line: /usr/cad/synopsys/verdi/2022.06/platform/LINUXAMD64/bin/Novas -nWave
+uname(Linux ws44 3.10.0-1160.36.2.el7.x86_64 #1 SMP Wed Jul 21 11:57:15 UTC 2021 x86_64)
+\! Could not get the fileId of /home/m111/m111063548/VLSI_TEST/LAB3/BIST/test/BIST.fsdb
+au time 1283.429960 52.768497 27.155954 delta 323567616 323567616 total 851001344 851001344

@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1684767936.641240582, "rt":1.33, "ut":0.37, "st":0.22}}
+{"vcselab":{"timestamp_begin":1684767938.062920315, "rt":1.27, "ut":0.42, "st":0.20}}
+{"link":{"timestamp_begin":1684767939.409487104, "rt":0.52, "ut":0.25, "st":0.15}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1684767936.012379453}
+{"VCS_COMP_START_TIME": 1684767936.012379453}
+{"VCS_COMP_END_TIME": 1684767943.261975202}
+{"VCS_USER_OPTIONS": "SRAM_tb.v SRAM.v -full64 -R -debug_access+all +v2k +neg_tchk"}
+{"vcs1": {"peak_mem": 331000}}
+{"stitch_vcselab": {"peak_mem": 211968}}

@@ -1,0 +1,5 @@
+{"vcs1":{"timestamp_begin":1685176564.124065967, "rt":0.99, "ut":0.09, "st":0.05}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1685176562.309948426}
+{"VCS_COMP_START_TIME": 1685176562.309948426}
+{"VCS_COMP_END_TIME": 1685176567.214564120}
+{"VCS_USER_OPTIONS": "BIST_Checkboard_tb.v BIST_SRAM_syn.v -v /home/m110/m110061576/process/CBDK_TSMC90GUTM_Arm_f1.0/orig_lib/aci/sc-x/verilog/tsmc090.v -full64 -R -debug_access+all +v2k +neg_tchk"}
